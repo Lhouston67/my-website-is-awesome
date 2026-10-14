@@ -1,0 +1,397 @@
+
+:root {
+    --primary: #153451;
+    --secondary: #168c9e;
+    --background: #edf4f7;
+    --text: #263746;
+    --accent: #a8e6e8;
+    --card: #ffffff;
+    --border: #d6e4eb;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+header {
+    background: linear-gradient(135deg, var(--primary), #206b83);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+
+header p {
+    margin-top: 0;
+    color: #d9f3f5;
+}
+
+
+nav {
+    background-color: var(--primary);
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 8px;
+    padding: 9px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+}
+
+section {
+    background-color: var(--card);
+    margin-bottom: 22px;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 3px 10px rgba(21, 52, 81, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                background-color 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(21, 52, 81, 0.12);
+}
+
+h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--secondary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(21, 52, 81, 0.15);
+    transition: transform 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.02);
+}
+
+.factor-card {
+    border-left: 5px solid var(--secondary);
+}
+
+.factor-card h2 {
+    margin-bottom: 12px;
+}
+
+.factor-card p {
+    margin-bottom: 12px;
+}
+
+.factor-card .example {
+    background-color: var(--background);
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+    margin-bottom: 0;
+}
+
+.market-card {
+    border-left: 5px solid var(--secondary);
+}
+
+.market-card h2 {
+    margin-top: 0;
+}
+
+.market-card h3 {
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+.market-type {
+    display: inline-block;
+    background-color: #dff3f4;
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.market-fit {
+    background-color: var(--background);
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary);
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.market-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.market-table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.market-table th,
+.market-table td {
+    padding: 12px;
+    border: 1px solid var(--border);
+}
+
+.market-table tbody tr:nth-child(even) {
+    background-color: var(--background);
+}
+
+.market-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.market-table tbody tr:hover {
+    background-color: #d9f0f2;
+}
+
+/* Interactive buttons */
+.interactive-button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 8px 0;
+    transition: all 0.25s ease;
+}
+
+.interactive-button:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(21, 52, 81, 0.2);
+}
+
+/* Keyboard focus for links and buttons */
+nav a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f4b942;
+    outline-offset: 3px;
+}
+
+/* Extra information on the homepage */
+.hidden-information {
+    display: none;
+}
+
+/* Dark mode */
+body.dark-mode {
+    --background: #172633;
+    --text: #e2edf4;
+    --card: #243746;
+    --border: #3b5263;
+    --primary: #10202d;
+    --secondary: #35b9c4;
+    --accent: #285c66;
+}
+
+/* Dark mode headings */
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #8de1e5;
+}
+
+/* Dark mode header and footer */
+body.dark-mode header {
+    background: linear-gradient(135deg, #101e2b, #1b4558);
+}
+
+body.dark-mode nav,
+body.dark-mode footer {
+    background-color: #101e2b;
+}
+
+/* Dark mode examples and labels */
+body.dark-mode .example,
+body.dark-mode .market-fit,
+body.dark-mode .market-type {
+    background-color: #304858;
+    color: #e2edf4;
+}
+
+/* Dark mode table */
+body.dark-mode .market-table th {
+    background-color: #10202d;
+}
+
+body.dark-mode .market-table td {
+    border-color: #455e6e;
+}
+
+body.dark-mode .market-table tbody tr:nth-child(even) {
+    background-color: #304858;
+}
+
+body.dark-mode .market-table tbody tr:hover {
+    background-color: #3b5968;
+}
+
+/* Dark mode buttons */
+body.dark-mode .interactive-button {
+    background-color: #168c9e;
+    color: white;
+}
+
+body.dark-mode .interactive-button:hover {
+    background-color: #236575;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 4px;
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 17px;
+    }
+
+    .market-table th,
+    .market-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Sections fade in when scrolling */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Keep the hover effect on animated sections */
+section.fade-in.visible:hover {
+    transform: translateY(-3px);
+}
+
+/* Show the section */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reading progress bar */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: var(--secondary);
+    z-index: 2000;
+    transition: width 0.1s ease;
+}
